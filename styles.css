@@ -1,0 +1,282 @@
+/* ===================== ROOT VARIABLES ===================== */
+:root {
+  --primary: #6366f1;      /* Indigo */
+  --secondary: #22d3ee;    /* Cyan */
+  --dark: #0f172a;         /* Slate-900 */
+  --light: #f8fafc;        /* Slate-50 */
+  --glass: rgba(255, 255, 255, 0.08);
+  --border-glass: rgba(255, 255, 255, 0.2);
+}
+
+/* ===================== GLOBAL RESET ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: radial-gradient(circle at top, #1e293b, #020617);
+  color: var(--light);
+  line-height: 1.6;
+}
+
+/* ===================== NAVBAR ===================== */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: linear-gradient(
+    to right,
+    rgba(15, 23, 42, 0.85),
+    rgba(2, 6, 23, 0.85)
+  );
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.navbar a {
+  color: #c7d2fe;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -6px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* ===================== HERO ===================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  animation: fadeUp 1s ease forwards;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.hero span {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero h3 {
+  margin-top: 1rem;
+  font-weight: 400;
+  color: #94a3b8;
+}
+
+.hero p {
+  margin: 1.5rem auto;
+  max-width: 650px;
+  color: #cbd5f5;
+}
+
+/* ===================== PROFILE IMAGE ===================== */
+.profile-img {
+  width: 190px;
+  height: 190px;
+  margin: 0 auto 2rem;
+  border-radius: 50%;
+  padding: 6px;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+
+  animation: float 6s ease-in-out infinite;
+}
+
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #020617;
+}
+
+/* ===================== BUTTONS ===================== */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 0.75rem 1.8rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(34, 211, 238, 0.35);
+}
+
+.btn.outline {
+  background: transparent;
+  border: 1px solid var(--border-glass);
+}
+
+/* ===================== SECTIONS ===================== */
+.section {
+  padding: 5rem 2rem;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* ===================== CARDS ===================== */
+.cards {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width: 260px;
+  padding: 2rem;
+  border-radius: 20px;
+
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-glass);
+
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* ===================== GRID PROJECTS ===================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.project {
+  padding: 2rem;
+  border-radius: 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.02)
+  );
+  border: 1px solid var(--border-glass);
+  transition: transform 0.4s ease;
+}
+
+.project:hover {
+  transform: translateY(-10px);
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--secondary)
+  );
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  padding: 2rem;
+  text-align: center;
+  color: #94a3b8;
+  border-top: 1px solid var(--border-glass);
+}
+
+/* ===================== ANIMATIONS ===================== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
