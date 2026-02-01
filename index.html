@@ -2,38 +2,166 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arslan | Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arslan Ali | Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
+
 </head>
+
+
 <body>
 
+<!-- ================= NAVBAR ================= -->
 <header class="navbar">
-  <h2 class="logo">Arslan</h2>
+  <h2 class="logo">Arslan Ali</h2>
+
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="projects.html">Projects</a>
+    <a href="#home">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
     <a href="contact.html">Contact</a>
   </nav>
+
+  <!-- THEME TOGGLE -->
+  <button id="themeToggle" aria-label="Toggle theme">🌙</button>
 </header>
 
-<section class="hero">
-  <div>
-    <h1>Hi, I'm <span>Arslan</span></h1>
-    <p>Frontend Developer & CS Student</p>
-    <a class="btn" href="projects.html">View Projects</a>
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero-content">
+
+    <!-- PROFILE IMAGE -->
+    <div class="profile-img">
+      <img src="profile.jpeg" alt="Arslan Ali">
+    </div>
+
+    <h1>Hi, I'm <span>Arslan Ali</span></h1>
+    <h3>Full Stack Developer | CS Undergraduate</h3>
+    <p>
+      Passionate about building scalable web applications, inclusive platforms,
+      and clean user experiences using modern web technologies.
+    </p>
+
+    <div class="hero-buttons">
+      <a class="btn" href="about.html">View Projects</a>
+      <a class="btn outline" href="https://github.com/arslan432004/" target="_blank">
+        GitHub
+      </a>
+    </div>
+
   </div>
 </section>
 
-<section class="cards">
-  <div class="card">HTML</div>
-  <div class="card">CSS</div>
-  <div class="card">JavaScript</div>
+<!-- ================= SKILLS ================= -->
+<section class="section" id="skills">
+  <h2 class="section-title">Technical Skills</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Languages</h3>
+      <p>C, C++, JavaScript, TypeScript, Python, Java, PHP</p>
+    </div>
+
+    <div class="card">
+      <h3>Frameworks & Libraries</h3>
+      <p>React.js, Express.js, Node.js, Tailwind CSS</p>
+    </div>
+
+    <div class="card">
+      <h3>Tools & Platforms</h3>
+      <p>Git, GitHub, Linux, MySQL</p>
+    </div>
+
+    <div class="card">
+      <h3>Soft Skills</h3>
+      <p>Problem Solving, Communication, Leadership, Time Management</p>
+    </div>
+  </div>
 </section>
 
+<!-- ================= PROJECTS ================= -->
+<section class="section" id="projects">
+  <h2 class="section-title">Projects</h2>
+
+  <div class="grid">
+    <div class="project">
+      <h3>Saanidhya</h3>
+      <p>
+        Inclusive educational platform for specially-abled learners featuring
+        adaptive quizzes, audio-based learning, and accessibility-focused UI.
+      </p>
+      <span class="badge">Full Stack</span>
+      <p class="tech">HTML • CSS • JS • PHP • Tailwind</p>
+    </div>
+
+    <div class="project">
+      <h3>Attendance Management System</h3>
+      <p>
+        Full-stack attendance platform with authentication, role-based dashboards,
+        and real-time attendance tracking.
+      </p>
+      <span class="badge">Web App</span>
+      <p class="tech">React • Node • Express • MongoDB</p>
+    </div>
+
+    <div class="project">
+      <h3>VPW2 – VA Mod Project</h3>
+      <p>
+        Custom mod of Virtual Pro Wrestling 2 involving hex-level editing,
+        move-set logic updates, and emulator-based debugging.
+      </p>
+      <span class="badge">Game Modding</span>
+      <p class="tech">VPW Studio • N64 Tools</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ACHIEVEMENTS ================= -->
+<section class="section light">
+  <h2 class="section-title">Achievements</h2>
+
+  <ul class="achievements">
+    <li>✔ Solved 100+ LeetCode problems and a few total coding challenges</li>
+    <li>✔ Participated in Smart India Hackathon and cleared 3 selection rounds</li>
+    <li>✔ Built multiple full-stack and frontend projects</li>
+  </ul>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section class="section" id="education">
+  <h2 class="section-title">Education</h2>
+
+  <div class="education">
+    <div class="edu-card">
+      <h3>B.Tech – Computer Science & Engineering</h3>
+      <p>Lovely Professional University, Punjab</p>
+      <p>CGPA: 6.82</p>
+    </div>
+
+    <div class="edu-card">
+      <h3>Class 12 – Intermediate</h3>
+      <p>Gyankalash International School</p>
+      <p>88%</p>
+    </div>
+
+    <div class="edu-card">
+      <h3>Class 10 – Matriculation</h3>
+      <p>Gyankalash International School</p>
+      <p>94.6%</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
 <footer>
   <p>© 2026 Arslan Ali</p>
+  <div class="socials">
+    <a href="https://www.linkedin.com/in/arslanali424" target="_blank">LinkedIn</a>
+    <a href="https://github.com/arslanali432004" target="_blank">GitHub</a>
+    <a href="mailto:arslanali432005@gmail.com">Email</a>
+  </div>
 </footer>
 
 </body>
